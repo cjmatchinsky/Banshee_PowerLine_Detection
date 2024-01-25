@@ -1,10 +1,12 @@
 from ultralytics import YOLO
 import os
 
-# Set the YOLO model
+## Set the YOLO model
+#
 model = YOLO('yolov8n')
 
-# Change to the YOLO directory
+## Change to the YOLO directory
+#
 yolo_dir = "dataset"
 os.chdir(yolo_dir)
 
@@ -12,6 +14,10 @@ os.chdir(yolo_dir)
 # while True:
 #     try:
 # Train the YOLO model
+
+
+## Setting for training Yolov8 model.
+#
 results = model.train(
     data='data.yaml',
     imgsz=640,
@@ -20,7 +26,8 @@ results = model.train(
     name='Yolov8n_powerline_model_weights_test_e210',
 )
 
-# Print a message after successful training
+## Print a message after successful training
+#
 print('Training completed successfully!')
 
 # Uncomment the following line if you want to break out of the loop on success
